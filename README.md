@@ -84,11 +84,12 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-1. Install (Python 3.10)[https://www.python.org/downloads/release/python-3108/] (or any version that works with Tensorflow, more instructions [here](https://www.tensorflow.org/install))
+1. Install (Python 3.9)[https://www.python.org/downloads/release/python-3913/] (or any version that works with Tensorflow, more instructions [here](https://www.tensorflow.org/install))
 2. Install Tensorflow prerequisites (different depending on your OS, for Windows Native you need [C++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170))
 3. Set-up virtual environment
   ```sh
-  python -m virtualenv -p="C:\Users\<USER>\AppData\Local\Programs\Python\Python310\python.Exe" .virtenv 
+  pip install virtualenv
+  python -m virtualenv -p="C:\Users\<USER>\AppData\Local\Programs\Python\Python39\python.Exe" .virtenv 
   ```
   (make sure you give the -p parameter the file path to where the correct python version is installed)
 4. Activate the environment (can be different depending on your OS)
@@ -99,9 +100,11 @@ To get a local copy up and running follow these simple steps.
   ```sh
   python -m pip install --upgrade pip
   ```
-6. Install library dependencies (NumPy, TensorFlow, Matplotlib, Flask)
+6. Install library dependencies (Pandas, tqdm, Jupyter TensorFlow, Matplotlib, Flask)
   ```sh
-  pip install numpy
+  pip install pandas
+  pip install tqdm
+  pip install Jupyter
   pip install tensorflow
   pip install matplotlib
   pip install flask
