@@ -1,26 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** adriendinzey, Instagram-Caption-Cooker, adriendinzey@gmail.com, Instagram Caption Cooker, This project employs deep learning models (RNN and CNN) to complete computer vision & natural language processing related tasks so that a user can upload an image and the application will return an "Insta Worthy" caption.
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -107,10 +84,30 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+1. Install (Python 3.10)[https://www.python.org/downloads/release/python-3108/] (or any version that works with Tensorflow, more instructions [here](https://www.tensorflow.org/install))
+2. Install Tensorflow prerequisites (different depending on your OS, for Windows Native you need [C++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170))
+3. Set-up virtual environment
   ```sh
-  npm install npm@latest -g
+  python -m virtualenv -p="C:\Users\<USER>\AppData\Local\Programs\Python\Python310\python.Exe" .virtenv 
+  ```
+  (make sure you give the -p parameter the file path to where the correct python version is installed)
+4. Activate the environment (can be different depending on your OS)
+  ```sh
+  .virtenv/Scripts/activate
+  ```
+5. Ensure pip is upgraded
+  ```sh
+  python -m pip install --upgrade pip
+  ```
+6. Install library dependencies (NumPy, TensorFlow, Matplotlib, Flask)
+  ```sh
+  pip install numpy
+  pip install tensorflow
+  pip install matplotlib
+  pip install flask
+7. If you want to deploy this app to AWS Lambda like I did, install Zappa
+  ```sh
+  pip install zappa
   ```
 
 ### Installation
@@ -119,10 +116,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/adriendinzey/Instagram-Caption-Cooker.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+
 
 
 
