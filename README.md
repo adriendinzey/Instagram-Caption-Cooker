@@ -84,22 +84,27 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-1. Install (Python 3.9)[https://www.python.org/downloads/release/python-3913/] (or any version that works with Tensorflow, more instructions [here](https://www.tensorflow.org/install))
+1. Install [Python 3.9](https://www.python.org/downloads/release/python-3913/) (or any version that works with Tensorflow, more instructions [here](https://www.tensorflow.org/install), and there is no need to add this to PATH)
+
 2. Install Tensorflow prerequisites (different depending on your OS, for Windows Native you need [C++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170))
+
 3. Set-up virtual environment
   ```sh
   pip install virtualenv
   python -m virtualenv -p="C:\Users\<USER>\AppData\Local\Programs\Python\Python39\python.Exe" .virtenv 
   ```
   (make sure you give the -p parameter the file path to where the correct python version is installed)
+
 4. Activate the environment (can be different depending on your OS)
   ```sh
   .virtenv/Scripts/activate
   ```
+
 5. Ensure pip is upgraded
   ```sh
   python -m pip install --upgrade pip
   ```
+
 6. Install library dependencies (Pandas, tqdm, Jupyter TensorFlow, Matplotlib, Flask)
   ```sh
   pip install pandas
@@ -108,14 +113,19 @@ To get a local copy up and running follow these simple steps.
   pip install tensorflow
   pip install matplotlib
   pip install flask
-7. If you want to deploy this app to AWS Lambda like I did, install Zappa
+  ```
+
+7. If you want to deploy this app to AWS Lambda like we did, install Zappa
   ```sh
   pip install zappa
   ```
 
+8. Get the [dataset](https://www.kaggle.com/datasets/prithvijaunjale/instagram-images-with-captions) and place it in `./images`.
+
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/adriendinzey/Instagram-Caption-Cooker.git
    ```
